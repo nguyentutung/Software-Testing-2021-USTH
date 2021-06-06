@@ -1,4 +1,6 @@
 #EX1.4
+
+```java
 import java.util.Vector;
 import java.util.ArrayList;
 class Vector_Ex4 {
@@ -25,10 +27,12 @@ class Vector_Ex4 {
 	System.out.println("The Vector is: " + vt);
   }
 }
+ ```
 #b, 
 when there are similarity in the two vector it will take both.
 #c
 test case 
+```java 
 Vector<string> va = new Vector<string>();
     va.add("l");
     va.add("m");
@@ -36,7 +40,9 @@ Vector<string> vb = new Vector<string>();
     vb.add("l");
     vb.add("2");
     vb.add("i");
+  ```
 #d
+```java
 import java.util.Vector;
 import java.util.ArrayList;
 class Vector_Ex4 {
@@ -52,3 +58,4 @@ class Vector_Ex4 {
         
     return vt;
   }
+```
