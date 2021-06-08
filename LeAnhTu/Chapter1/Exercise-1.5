@@ -1,0 +1,143 @@
+```java
+CountPositive
+
+/**
+ * a) Describe: 0 is not positive or negative number. Give fault at "if"
+ * Correctness: if (x[i] > 0)
+ * <p>
+ * b) Test case 1: The all negative and the null value of array x will not result "if", so not given a fault
+ * - Input: x = null
+ * - Output: NullPointerException
+ * - Expected: NullPointerException
+ * <p>
+ * c) Test case 2: The positive but none zero will execute fault but not give a error state
+ * - Input: x = [1, 2]
+ * - Output: 2
+ * - Expected: 2
+ * <p>
+ * d) Test case 3: There is no case that result an error but not a failure. Because "if" is executed mean count
+ * does not correct anymore.
+ * <p>
+ * e) Test case 3:
+ * - Input: x = [1, 2, 0]
+ * - Output: 3
+ * - Expected: 2
+ * - Error state:
+ * i = 2, x[i] = 0, count = 2
+ * "if" is true
+ * return count = 3 (error)
+ * <p>
+ * f) Test case 4: Edit if (x[i] >= 0) statement into if (x[i] > 0)
+ *
+ * @param args
+ */
+```
+
+```java
+FindLast
+
+/**
+ * a) Describe: i variable must run in range (0, length). Given (1, length)
+ * Correctness: for (int i = x.length - 1; i >= 0; i--)
+ * <p>
+ * b) Test case 1: The null value for x will result in a NullPointerException before the loop test is run,
+ * so no execution of the fault
+ * - Input: x = null, y = 2
+ * - Output: NullPointerException
+ * - Expected: NullPointerException
+ * <p>
+ * c) Test case 2: When ever x is not at position 0 of x hence no error executed, but fault is the for loop still run
+ * - Input: x = [2, 3, 5], y = 5
+ * - Output: 2
+ * - Expected: 2
+ * <p>
+ * d) Test case 3: If y does not in x. Error is executed but not give an failure result
+ * - Input: x = [2, 3, 5], y = 0
+ * - Output: -1
+ * - Expected: -1
+ * <p>
+ * e) Test case: in d)
+ * - State: (x = [2, 3, 5], y = 0, i = 0; PC = return -1;)
+ * <p>
+ * f) Test case 4: after repair fault into for (int i = x.length - 1; i >= 0; i--)
+ * - Input: x = [2, 3, 5], y = 2
+ * - Output: 0
+ * - Expected: 0
+ *
+ * @param args:
+ */
+```
+
+```java
+LastZero
+
+/**
+ * a) Describe: Using return statement made program stop whenever if statement is executed. Program is expected
+ * to count the last 0 element on the array, not the first 0.
+ * Correctness: add count variable for saving i when "if" is true then return count
+ * <p>
+ * b) Test case 1: The null value for x will result in a NullPointerException before the loop test is run,
+ * so no execution of the fault
+ * - Input: x = null
+ * - Output: NullPointerException
+ * - Expected: NullPointerException
+ * <p>
+ * c) Test case 2: There is no way to execute fault but do not run error state. Because return statement stop
+ * program after executed
+ * <p>
+ * d) Test case 3: The array with only 1 element of zero will run error and fault but not given a failure
+ * - Input: x = [1, 0, 1]
+ * - Output: 1
+ * - Expected: 1
+ * <p>
+ * e) Test case: in e)
+ * - Error state: (x = [1, 0, 1], i = 1, x[i] = 0, "if" is true, PC = return 1;)
+ * <p>
+ * f) Test case 4: Adding count variable and using count = i instead of return i;
+ * - Repaired: as this method lastZero() below
+ * - Input: x = [1, 0, 1, 0]
+ * - Output: 3
+ * - Expected: 3
+ *
+ * @param args:
+ */
+```
+
+```java
+OddOrPos
+
+/**
+ * a) Describe: count of odd or positive elements in x, if x is both positive and odd return 2
+ * Correctness: Instead of 1 "if", it should be divided into 2 as odd
+ * <p>
+ * b) Test case 1: The null value for x will result in a NullPointerException before the loop test is run,
+ * so no execution of the fault
+ * - Input: x = null
+ * - Output: NullPointerException
+ * - Expected: NullPointerException
+ * <p>
+ * c) Test case 2: The x values is only even number or just only 0
+ * - Input: x = [0]
+ * - Output: 0
+ * - Expected: 0
+ * <p>
+ * d) Test case 3: There is no case that result an error but not a failure. Because "if" is executed mean count
+ * does not correct anymore.
+ * <p>
+ * e) Test case: in d)
+ * - Input: x = [-1, 2, 3]
+ * - Output: 2
+ * - Expected: 3
+ * - Error state:
+ * count = 0, i = 1, x[i] = 2
+ * "if" is true
+ * count = 1 (error)
+ * <p>
+ * f) Test case 4: As oddOrPos() method below
+ * - Input: x = [-1, 2, 3]
+ * - Output: 3
+ * - Expected: 3
+ *
+ * @param args:
+ */
+```

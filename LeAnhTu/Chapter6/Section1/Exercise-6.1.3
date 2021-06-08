@@ -1,0 +1,46 @@
+### Topic: Answer the following questions for the method search() at Section 6.1.
+
+<center>Answer</center>
+
+### a) “Location of element in list” fails the disjointness property. Give an example that illustrates this.
+
+Example: input = ([1], 1)
+
+- B1: True
+- B2: True
+- B3: False
+
+=> Disjointness fail
+
+### b) “Location of element in list” fails the completeness property. Give an example that illustrates this.
+
+Example: input = ([1, 2, 3], 0)
+
+- B1: F
+- B2: F
+- B3: F
+
+=> Completeness fail
+
+### c) Supply one or more new partitions that capture the intent of “Location of element in list” but do not suffer from completeness or disjointness problems.
+
+Separating the characteristic into 4 blocks below:
+
+- Is element appear at the first position:
+    + True
+    + False
+
+
+- Is element appear at the last position:
+    + True
+    + False
+
+
+- Is element appear at the others position:
+    + True
+    + False
+
+
+- Is element is not in the list:
+    + True
+    + False
