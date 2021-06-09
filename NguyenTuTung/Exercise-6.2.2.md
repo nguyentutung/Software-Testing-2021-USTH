@@ -51,9 +51,23 @@ public class TriangleType
 |side3|2|1|0|-1|
 
 ### Test case
+#### Pair-Wise Coverage (PWC) :  A value from each block for each characteristic must be combined with a value from every block for each other characteristic.
+
 ```
-(2, 2, 2), (2, 1, 1), (2, 0, 0), (2, −1, −1)
-(1, 2, 2), (1, 1, 1), (1, 0, 0), (1, −1, −1)
-(0, 2, 2), (0, 1, 1), (0, 0, 0), (0, −1, −1)
-(−1, 2, 2), (−1, 1, 1), (−1, 0, 0), (−1, −1, −1)
+{(2, 2, 2),
+(2, 1, 1),
+(2, 0, 0),
+(2, −1, −1),
+(1, 2, 1),
+(1, 1, 2),
+(1, 0, −1),
+(1, −1, 0),
+(0, 2, 0),
+(0, 1, −1),
+(0, 0, 2),
+(0, −1, 1),
+(−1, 2, −1),
+(−1, 1, 0),
+(−1, 0, 1),
+(−1, −1, 2)}
 ```
