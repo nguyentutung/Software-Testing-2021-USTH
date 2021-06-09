@@ -51,14 +51,20 @@ public class TriangleType
 |side3|2|1|0|-1|
 
 ### Test case
-```
-Base test (1, 2, 2):
-(0, 2, 2), (−1, 2, 2)
-(1, 1, 2), (1, 0, 2), (1, −1, 2)
-(1, 2, 1), (1, 2, 0), (1, 2, −1)
 
-Base test (2, 2, 2):
-(0, 2, 2), (-1, 2, ,2)
-(2, 1, 2), (2, 0, 2), (2, -1, 2)
-(2, 2, 1), (2, 2, 0), (2, 2, -1)
+#### Multiple Base Choice Coverage (MBCC) :  At least one, and possibly more, base choice blocks are chosen for each characteristic, and base tests are formed by using each base choice for each characteristic at least once. Subsequent tests are chosen by holding all but one base choice constant for each base test and using each non-base choice in each other characteristic.
+
+```
+{(2, 2, 2), //F irst base test
+(0, 2, 2),(−1, 2, 2), 
+(2, 1, 2),(2, 0, 2),(2, −1, 2), 
+(2, 2, 1),(2, 2, 0),(2, 2, −1), 
+{(1, 2, 2), //Second base test
+(0, 2, 2),(−1, 2, 2), 
+(1, 1, 2),(1, 0, 2),(1, −1, 2),
+(1, 2, 1),(1, 2, 0),(1, 2, −1), 
+
+
+
+}
 ```
