@@ -1,0 +1,58 @@
+# Exercise 3.10
+### ListTheoryTest.java
+
+```Java
+@RunWith (Theories.class)
+public class ListTheoryTest
+{
+    @DataPoints
+    public static String[] string = {"ant", "bat", "cat"};
+
+    @DataPoints
+    public static List[] lists = {
+            Arrays.asList ("ant", "bat"),
+            Arrays.asList ("bat", "cat", "dog", "elk"),
+            Arrays.asList ("Snap", "Crackle", "Pop")
+    };
+
+    @Theory
+    public void removeThenAddDoesNotChangeList
+            (List<String> list, String string)
+    {
+        assumeTrue (list != null);
+        assumeTrue (list.contains (string));
+        List<String> copy = new ArrayList<String>(list);
+        copy.remove (string);
+        copy.add (string);
+        assertEquals(list, copy);
+    }
+}
+```
+
+## SetTheoryTest.java
+```Java
+@RunWith(Theories.class)
+public class SetTheoryTest {
+    @DataPoints
+    public static String[] string = {"ant", "bat", "cat"};
+
+    @DataPoints
+    public static Set[] sets = {
+            new TreeSet(Arrays.asList("ant", "bat")),
+            new TreeSet(Arrays.asList("bat", "cat", "dog", "elk")),
+            new TreeSet(Arrays.asList("Snap", "Crackle", "Pop"))
+    };
+
+
+    @Theory
+    public void removeThenAddDoesNotChangeSet(Set<String> set, String string) {
+        assumeTrue(set != null);
+        assumeTrue(set.contains(string));
+        Set<String> copy = new TreeSet<>(set);
+        copy.remove(string);
+        copy.add(string);
+        assertTrue(set.equals(copy));
+    }
+}
+```
+Because of List sort element while set only distinct elements. So, all test pass.
